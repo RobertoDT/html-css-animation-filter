@@ -1,0 +1,283 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    transition: background 2s;
+}
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 3s linear;
+}
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: border-radius 1s ease-in;
+}
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: background 2s ease-out;
+}
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+    transition: all 2s;
+}
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+}
+.ex-7-img{
+  transition: filter 0.3s ease-in;
+}
+.ex-8-img{
+  transition: all 0.6s ease-in;
+}
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+    transition: all 1s;
+}
+
+.ex-10-icon {
+    font-size: 60px;
+    animation: rotazione 3s linear infinite;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-top-white{
+  animation: piccolo-spostamento 3s linear infinite;
+}
+.ex-12-bottom-white{
+  animation: piccolo-spostamento2 3s linear infinite;
+}
+
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-13-top-white{
+  animation: spostamento 5s linear infinite;
+}
+.ex-13-bottom-white{
+  animation: spostamento2 5s linear infinite;
+}
+
+
+/*Esercizio*/
+
+.ex-1-square:hover{
+  background: red;
+}
+
+.ex-2-square:active{
+  width: 100%;
+}
+
+.ex-3-square:hover{
+  border-radius: 50%;
+}
+
+.ex-4-square:hover{
+  background: rgba(0, 0, 0, 0);
+}
+
+.ex-5-square:hover{
+  width: 80px;
+  height: 80px;
+}
+.ex-5-square:active{
+  width: 40px;
+  height: 40px;
+}
+
+.ex-6-img:hover{
+  filter: grayscale(1);
+}
+
+.ex-7-img:hover{
+  filter: sepia(0.4) grayscale(0.7);
+}
+
+.ex-8-img:hover{
+  filter: contrast(0.3) brightness(1.5);
+  border-radius: 10px;
+}
+
+.ex-9-img:hover{
+  filter: saturate(0.4) brightness(1.3);
+  border-radius: 10px;
+  transform: scale(1.3, 1.3);
+}
+
+@keyframes rotazione {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.ex-11-icon:hover {
+  animation: rotazione2 4s linear infinite;
+}
+@keyframes rotazione2 {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes piccolo-spostamento{
+  0%{
+    position: absolute;
+    top: -10px;
+    left: 10%;
+  }
+  50%{
+    position: absolute;
+    top: -10px;
+    left: 60%;
+  }
+  100%{
+    position: absolute;
+    top: -10px;
+    left: 10%;
+  }
+}
+@keyframes piccolo-spostamento2{
+  0%{
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+  }
+  50%{
+    position: absolute;
+    bottom: -10px;
+    right: 60%;
+  }
+  100%{
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+  }
+}
+
+@keyframes spostamento {
+  0%{
+    position: absolute;
+    top: -10px;
+    left: 10%;
+  }
+  25%{
+    position: absolute;
+    top: -10px;
+    left: calc(100% - 30px);
+  }
+  50%{
+    position: absolute;
+    top: calc(100% - 10px);
+    left: calc(100% - 30px);
+  }
+  75%{
+    position: absolute;
+    top: calc(100% - 10px);
+    left: -30px;
+  }
+  90%{
+    position: absolute;
+    top: -10px;
+    left: -30px;
+  }
+  100%{
+    position: absolute;
+    top: -10px;
+    left: 10%;
+  }
+}
+
+@keyframes spostamento2 {
+  0%{
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+  }
+  25%{
+    position: absolute;
+    bottom: -10px;
+    right: calc(100% - 30px);
+  }
+  50%{
+    position: absolute;
+    bottom: calc(100% - 10px);
+    right: calc(100% - 30px);
+  }
+  75%{
+    position: absolute;
+    bottom: calc(100% - 10px);
+    right: -30px;
+  }
+  90%{
+    position: absolute;
+    bottom: -10px;
+    right: -30px;
+  }
+  100%{
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+  }
+}
